@@ -11,32 +11,16 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-12">
-                   <div class="card">
-                        <div class="card-header text-center"><h3>Triangular pattern</h3></div>
-                        <div class="card-body">
-                            <center>
-                                <?php
-                                    $string = "*&nbsp &nbsp ";
-                                    for ($i=1; $i < 8; $i++) { 
-                                        # code...
-                                        echo "<h6>";
-                                        echo $string . "<br>";
-                                        $string .= "* &nbsp &nbsp";
-                                        // echo str_repeat("&nbsp &nbsp * &nbsp &nbsp", $i);
-                                        echo   "</h3><br>";
-                                    }
-                                ?>
-                            </center>
-                        </div>
-                   </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<?php
+    function form_pattern($s) {
+        $string = "$s&nbsp &nbsp ";
+        for ($i=1; $i < 8; $i++) {
+            echo "<h6>";
+            echo $string . "<br>";
+            $string .= "$s&nbsp &nbsp";
+            echo   "</h3><br>";
+        }
+    }
+?>
 </body>
 </html>

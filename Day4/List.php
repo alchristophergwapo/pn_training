@@ -10,7 +10,7 @@
     <?php
         $servername = "localhost";
         $username = "root";
-        $password = "christopher";
+        $password = "2ndyrGroupA";
         $database = "pntraining";
         
         // Creating connection

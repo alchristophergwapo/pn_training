@@ -51,12 +51,7 @@ class Activity1{
         echo "</pre>";
     }
 
-    // 4. Write a  program to display string, values within a table. Table columns would be  Name and 
-    // Salary. You can use HTML tables
-    function create_table($name, $salary) {
-        echo "<tr><td>$name</td>";
-        echo "<td>$salary</td></tr>";
-    }
+    
 
     // 5. Arithmetic operations on character variables : $d = 'A00'. Using this variable print the 
     // following numbers.
@@ -91,17 +86,6 @@ class Activity1{
     }
     
 }
-
-$months = array("January", "February", "March", "April", "May", "June", "July", 
-                "August", "September", "October", "November", "December");
-
-$activity1 = new Activity1;
-$activity1->factorial(5);
-$activity1->create_chess_board();
-$activity1->remove_element_in_numeric_array($months, "January");
-$activity1->character_arithmetic_operation();
-$activity1->get_last_edit_date("Activity1.php");
-$activity1->change_color_first_letter("PN Training");
 ?>
 
 <!DOCTYPE html>
@@ -118,9 +102,15 @@ $activity1->change_color_first_letter("PN Training");
     <table border="#FFFFFF" width="250px">
         <th>Name</th>
         <th>Salary</th>
-        <?php
-            $activity1->create_table("Toper",35000);
-            $activity1->create_table("Judy",30000);
+        <?
+            // 4. Write a  program to display string, values within a table. Table columns would be  Name and 
+            // Salary. You can use HTML tables
+            function create_table($name, $salary) {
+                echo "<tr><td>$name</td>";
+                echo "<td>$salary</td></tr>";
+            }
+            create_table("Toper",35000);
+            create_table("Judy",30000);
             echo "<br>"
         ?>
     </table>

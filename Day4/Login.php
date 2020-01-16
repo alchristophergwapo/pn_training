@@ -16,32 +16,34 @@
 
 </head>
 <body>
-    <section class="sign-in">
-        <div class="container">
-            <div class="signin-content">
-                <div class="signin-image">
-                    <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                    <a href="Register.php" class="signup-image-link">Create an account</a>
-                </div>
-                <div class="signin-form">
-                    <h2 class="form-title">Login</h2>
-                    <form method="POST" class="register-form" id="login-form" action="Auth_user.php">
-                        <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-email"></i></label>
-                            <input type="text" name="email" id="your_name" placeholder="Username" />
-                        </div>
-                        <div class="form-group">
-                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="pass" id="your_pass" placeholder="Password" />
-                        </div>
-                        <div class="form-group form-button">
-                            <input type="submit" name="login" id="signin" class="form-submit" value="Log in" />
-                        </div>
-                    </form>
+    <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="Register.php" class="signup-image-link">Create an account</a>
+                    </div>
+                    <div class="signin-form">
+                        <h2 class="form-title">Login</h2>
+                        <form method="POST" class="register-form" id="login-form" action="Auth_user.php">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="email" id="your_name" placeholder="Username" />
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="pass" id="your_pass" placeholder="Password" />
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="login" id="signin" class="form-submit" value="Log in" />
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>  
+    </div>
 
 </body>
 </html>
