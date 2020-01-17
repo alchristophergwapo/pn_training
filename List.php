@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 <body>
     <?php
         $servername = "localhost";
         $username = "root";
-        $password = "2ndyrGroupA";
+        // $password = "2ndyrGroupA";
+        $password = "";
         $database = "pntraining";
         
         // Creating connection
@@ -33,10 +35,13 @@
                             echo "<td>" . $row["first_name"] . "</td>";
                             echo "<td>" . $row["middle_name"] . "</td>";
                             echo "<td>" . $row["last_name"] . "</td>";
-                            echo "<td>" . $row["email"] . "</td>";
+                            echo "<td>" . $row["item"] . "</td>";
+                            echo "<td>" . $row["quantity"] . "</td>";
+                            echo "<td>" . $row["price"] . "</td>";
+                            echo "<td>" . $row["amount"] . "</td>";
                             $id = $row['id'];
-                            echo "<td><a href='Delete.php?id=$id'>Delete</a></td>";
-                            echo "<td><a href='EditData.php?id=$id'>Edit</a></td>";
+                            echo "<td><a href='Delete.php?id=$id'><i class='fas fa-trash-alt' style='font-size:24px'></i></a></td>";
+                            echo "<td><a href='EditData.php?id=$id'><i class='fas fa-edit' style='font-size:24px'></i></a></td>";
                         echo "</tr>";
                     echo "<tbody>";
                 }

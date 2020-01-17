@@ -1,7 +1,8 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "2ndyrGroupA";
+    // $password = "2ndyrGroupA";
+    $password = "";
     $database = "pntraining";
     
     // Creating connection
@@ -17,12 +18,13 @@
         $first_name = $_POST["first_name"];
         $middle_name = $_POST["middle_name"];
         $last_name = $_POST["last_name"];
-        $email = $_POST["email"];
-        $pass = $_POST['pass'];
-        $pass2 = $_POST["re-pass"];
+        $item = $_POST["item"];
+        $quantity = $_POST['quantity'];
+        $price = $_POST["price"];
+        $amount = $_POST["price"] * $_POST["quantity"];
 
         $query = "UPDATE persons SET first_name='".$first_name."', middle_name='".$middle_name."',
-            last_name ='".$last_name."', email='".$email."' WHERE id=$id";
+            last_name ='".$last_name."', item='".$item."', quantity=$quantity, price=$price, amount=$amount WHERE id=$id";
         
         if($pass === $pass2) {
             if ($conn->query($query)) {

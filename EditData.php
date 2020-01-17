@@ -18,7 +18,8 @@
     <?php
         $servername = "localhost";
         $username = "root";
-        $password = "2ndyrGroupA";
+        // $password = "2ndyrGroupA";
+        $password = "";
         $database = "pntraining";
         
         // Creating connection
@@ -51,28 +52,28 @@
                                 <input name="id" type="text" value=<?php echo $id?> hidden/>
                             </div>
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                                 <input type="text" name="first_name" id="first_name" value=<?php echo $row["first_name"]?> required/>
                             </div>
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                                 <input type="text" name="middle_name" id="middle_name" value=<?php print_r($row["middle_name"])?> required/>
                             </div>
                             <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                                 <input type="text" name="last_name" id="last_name" value=<?php echo $row["last_name"]?> required/>
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="email" id="email" value=<?php echo $row["email"]?> required/>
+                                <!-- <label for="email"><i class="zmdi zmdi-email"></i></label> -->
+                                <input type="text" name="item" id="item" value=<?php echo $row["item"]?> required/>
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                                <!-- <label for="pass"><i class="zmdi zmdi-lock"></i></label> -->
+                                <input type="number" name="quantity" id="quantity" value=<?php echo $row["quantity"]?> required/>
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="password" name="re-pass" id="re_pass" placeholder="Repeat your password" required/>
+                                <!-- <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label> -->
+                                <input type="number" name="price" id="price" value=<?php echo $row["price"]?> required/>
                             </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="update" id="signup" class="form-submit" value="Update"/>
