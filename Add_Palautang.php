@@ -42,7 +42,7 @@
                 if(mysqli_num_rows($res) > 0) {
                     
                     // echo "";
-                    echo "<option></option>";
+                    echo "<option>Select item ....</option>";
                     while($row = mysqli_fetch_array($res)) {
                         print_r($row);
                         echo "<option>".$row['item']."</option>";
@@ -61,15 +61,15 @@
                     <h2 class="form-title">Add Palautang</h2>
                     <form method="POST" class="register-form" id="register-form" action="Register_nangutang.php">
                         <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                             <input type="text" name="first_name" id="name" placeholder="First Name" required />
                         </div>
                         <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                             <input type="text" name="middle_name" id="name" placeholder="Middle Name" required />
                         </div>
                         <div class="form-group">
-                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <!-- <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label> -->
                             <input type="text" name="last_name" id="name" placeholder="Last Name" required />
                         </div>
                         <div class="form-group">

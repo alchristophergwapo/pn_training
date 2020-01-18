@@ -46,7 +46,7 @@
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
-                        <h2 class="form-title">Update</h2>
+                        <h2 class="form-title">Update Utang</h2>
                         <form method="POST" class="register-form" id="register-form" action="Update_nangutang.php">
                             <div>
                                 <input name="id" type="text" value=<?php echo $id?> hidden/>
