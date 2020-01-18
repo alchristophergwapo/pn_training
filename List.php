@@ -11,8 +11,8 @@
     <?php
         $servername = "localhost";
         $username = "root";
-        // $password = "2ndyrGroupA";
-        $password = "";
+        $password = "2ndyrGroupA";
+        // $password = "";
         $database = "pntraining";
         
         // Creating connection
@@ -29,22 +29,22 @@
 
         if($result) {
             if(mysqli_num_rows($result) > 0) {
+                echo "<tbody>";
                 while ($row = mysqli_fetch_array($result)) {
-                    echo "<tbody>";
-                        echo "<tr>";
-                            echo "<td>" . $row["first_name"] . "</td>";
-                            echo "<td>" . $row["middle_name"] . "</td>";
-                            echo "<td>" . $row["last_name"] . "</td>";
-                            echo "<td>" . $row["item"] . "</td>";
-                            echo "<td>" . $row["quantity"] . "</td>";
-                            echo "<td>" . $row["price"] . "</td>";
-                            echo "<td>" . $row["amount"] . "</td>";
-                            $id = $row['id'];
-                            echo "<td><a href='Delete.php?id=$id'><i class='fas fa-trash-alt' style='font-size:24px'></i></a></td>";
-                            echo "<td><a href='EditData.php?id=$id'><i class='fas fa-edit' style='font-size:24px'></i></a></td>";
-                        echo "</tr>";
-                    echo "<tbody>";
+                    echo "<tr>";
+                        echo "<td>" . $row["first_name"] . "</td>";
+                        echo "<td>" . $row["middle_name"] . "</td>";
+                        echo "<td>" . $row["last_name"] . "</td>";
+                        echo "<td>" . $row["item"] . "</td>";
+                        echo "<td>" . $row["quantity"] . "</td>";
+                        echo "<td>" . $row["price"] . "</td>";
+                        echo "<td>" . $row["amount"] . "</td>";
+                        $id = $row['id'];
+                        echo "<td><a href='Delete_utang.php?id=$id'><i class='fas fa-trash-alt' style='font-size:24px;color:red'></i></a></td>";
+                        echo "<td><a href='Edit_utang.php?id=$id'><i class='far fa-edit' style='font-size:24px'></i></a></td>";
+                    echo "</tr>";
                 }
+                echo "<tbody>";
             }
         }
 

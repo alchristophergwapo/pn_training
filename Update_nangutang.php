@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    // $password = "2ndyrGroupA";
-    $password = "";
+    $password = "2ndyrGroupA";
+    // $password = "";
     $database = "pntraining";
     
     // Creating connection

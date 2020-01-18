@@ -18,8 +18,8 @@
     <?php
         $servername = "localhost";
         $username = "root";
-        // $password = "2ndyrGroupA";
-        $password = "";
+        $password = "2ndyrGroupA";
+        // $password = "";
         $database = "pntraining";
         
         // Creating connection
@@ -47,7 +47,7 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Update</h2>
-                        <form method="POST" class="register-form" id="register-form" action="Update.php">
+                        <form method="POST" class="register-form" id="register-form" action="Update_nangutang.php">
                             <div>
                                 <input name="id" type="text" value=<?php echo $id?> hidden/>
                             </div>

@@ -17,6 +17,42 @@
 
 <body>
 
+    <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "2ndyrGroupA";
+        // $password = "";
+        $database = "pntraining";
+        
+        // Creating connection
+        $conn = mysqli_connect($servername, $username, $password, $database);
+        
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $query = "SELECT * FROM items";
+        $result = $conn->query($query);
+
+        function get_item($res) {
+            
+
+            if($res) {
+                if(mysqli_num_rows($res) > 0) {
+                    
+                    // echo "";
+                    echo "<option></option>";
+                    while($row = mysqli_fetch_array($res)) {
+                        print_r($row);
+                        echo "<option>".$row['item']."</option>";
+                    }
+                    // echo "</select>";
+                }
+            }
+        }
+    ?>
+
     <!-- Sign up form -->
     <section class="signup">
         <div class="container">
@@ -37,16 +73,12 @@
                             <input type="text" name="last_name" id="name" placeholder="Last Name" required />
                         </div>
                         <div class="form-group">
-                            <!-- <label for="pass"><i class="zmdi zmdi-lock"></i></label> -->
-                            <input type="text" name="item" id="item" placeholder="Item name" required />
+                            <select class='form-control' id='sel1' name='item'>
+                                <?php get_item($result)?>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <!-- <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label> -->
                             <input type="number" name="quantity" id="quantity" placeholder="Quantity ....." required />
-                        </div>
-                        <div class="form-group">
-                            <!-- <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label> -->
-                            <input type="number" name="price" id="price" placeholder="Price ......" required />
                         </div>
                         <div class="form-group form-button">
                             <input type="submit" name="add_palautang" id="signup" class="form-submit" value="Add" />
@@ -55,7 +87,6 @@
                 </div>
                 <div class="signup-image">
                     <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                    <!-- <a href="Login.php" class="signup-image-link">I am already member</a> -->
                 </div>
             </div>
         </div>
